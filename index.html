@@ -2,17 +2,18 @@
 <html></html>
 <head>
   <title>Antipodal</title>
+
   <script>
-    var apiKey = process.env.API_KEY;
-    function loadGoogleMaps() {
-      var script = document.createElement("script");
-      script.src =
-        "https://maps.googleapis.com/maps/api/js?key=" +
-        apiKey +
-        "&callback=initMap&libraries=places&v=weekly";
-      script.defer = true;
-      document.head.appendChild(script);
-    }
+    console.log(window.env.API_KEY);
+  </script>
+  <script>
+    const script = "";
+    script.src =
+      "https://maps.googleapis.com/maps/api/js?key=" +
+      apiKey +
+      "&callback=initMap&libraries=places&v=weekly";
+    script.defer = true;
+    document.head.appendChild(script);
   </script>
   <script type="text/javascript" src="src.js"></script>
   <link rel="stylesheet" href="style.css" />
