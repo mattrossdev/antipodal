@@ -4,13 +4,11 @@
   <title>Antipodal</title>
 
   <script>
-    console.log(window.env.API_KEY);
-  </script>
-  <script>
-    const script = "";
+    // Load the API key dynamically
+    var script = document.createElement("script");
     script.src =
       "https://maps.googleapis.com/maps/api/js?key=" +
-      apiKey +
+      API_KEY +
       "&callback=initMap&libraries=places&v=weekly";
     script.defer = true;
     document.head.appendChild(script);
