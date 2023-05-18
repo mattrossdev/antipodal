@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+  <title>Antipodal</title>
+  <script>
+    var apiKey = API_KEY || "";
+    function loadGoogleMaps() {
+      var script = document.createElement("script");
+      script.src =
+        "https://maps.googleapis.com/maps/api/js?key=" +
+        apiKey +
+        "&callback=initMap&libraries=places&v=weekly";
+      script.defer = true;
+      document.head.appendChild(script);
+    }
+  </script>
+  <script type="text/javascript" src="src.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="./assets/favicon.png" type="image/png" />
+</head>
+<body>
+  <div class="app">
+    <section id="heading">
+      <h1>
+        Antipodal <img src="./assets/logo.webp" alt="Globe logo graphic" />
+      </h1>
+      <h2>Find out what's on the other side of the world!</h2>
+    </section>
+    <div id="search">
+      <input id="user-location" type="text" placeholder="Enter a location" />
+    </div>
+    <div class="container">
+      <div class="map-module" id="map-module0">
+        <div class="map" id="map0"></div>
+        <div class="infowindow" id="infowindow-content">
+          <span id="place-name" class="title"></span>
+          <span id="place-address"></span>
+        </div>
+        <span class="coordinates" id="place0-coordinates">Coordinates: </span>
+      </div>
+      <div class="map-module" id="map-module1">
+        <div class="map" id="map1"></div>
+        <div class="infowindow" id="antipode-infowindow-content">
+          <span id="antipode-place-name" class="title"></span>
+          <span id="antipode-place-address"></span>
+        </div>
+        <span class="coordinates" id="place1-coordinates">Coordinates: </span>
+      </div>
+    </div>
+    <section id="examples">
+      Here are some examples of cities that are almost exact antipodes:
+      <ul>
+        <li>
+          <span class="example"> <a>Xi'an, China -- Santiago, Chile </a></span>
+        </li>
+        <li>
+          <span class="example">
+            <a
+              >Nelson, New Zealand -- Mogadouro, Bragança District, Portugal
+            </a></span
+          >
+        </li>
+        <li>
+          <span class="example">
+            <a> Whangarei, New Zealand -- Tangier, Morocco </a></span
+          >
+        </li>
+      </ul>
+    </section>
+    <section class="footer">
+      <span id="copyright"> Copyright © 2023 Matt Ross</span>
+    </section>
+  </div>
+</body>

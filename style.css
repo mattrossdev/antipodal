@@ -1,0 +1,129 @@
+.app {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+}
+
+#heading {
+  justify-content: center;
+  text-align: center;
+}
+#heading > h1 {
+  width: 100%;
+}
+
+#heading img {
+  max-height: 2.25em;
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 2.25em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+.map {
+  height: 400px;
+  width: 100%;
+}
+
+#search {
+  width: 100%;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  background-color: hsl(210, 73%, 15%);
+  padding: 20px 0px;
+  color: hsl(0, 0%, 20%);
+  border: 1px solid hsl(0, 0%, 89%);
+}
+
+#search > input {
+  width: 80%;
+  max-width: 700px;
+  min-height: 25px;
+  background-color: white;
+  height: 20%;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+#user-location::placeholder {
+  padding-left: 2%;
+}
+
+.container {
+  display: block;
+  width: 100%;
+}
+
+#examples {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(37, 99%, 67%);
+  width: 100%;
+  border: 1px solid hsl(0, 0%, 89%);
+  padding: 20px 0px;
+}
+
+#examples > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#examples > li {
+  display: flex;
+  align-items: center;
+}
+
+li::before {
+  content: "\2022"; /* Unicode bullet character */
+  margin-right: 0.5em;
+}
+
+a {
+  color: hsl(210, 73%, 15%);
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.coordinates {
+  font-style: italic;
+}
+
+#copyright {
+  font-size: 0.75em;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    width: 100%;
+  }
+  .map-module {
+    width: 50%;
+    padding: 15px 15px;
+  }
+  .coordinates {
+    text-align: left;
+    margin: 10px 0px;
+  }
+}
